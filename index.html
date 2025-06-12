@@ -4,10 +4,29 @@
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<title>ChronoSphere</title>
-	<script src='[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)'></script>
-	<link rel='stylesheet' href='assets/css/style.css'>
+	<link href="assets/css/tailwind.css" rel="stylesheet">
 </head>
 <body class='bg-gray-100'>
-	<!-- Content for index.html -->
+	<div class="container mx-auto py-12">
+		<h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Welcome to ChronoSphere</h1>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="p-6 bg-white rounded-lg shadow-md">
+				<h2 class="text-2xl font-semibold text-gray-700 mb-4">New to ChronoSphere?</h2>
+				<p class="text-gray-600 mb-4">Join our community and start building your personal timeline of memories. Connect with friends, share your experiences, and collaboratively create shared memories.</p>
+				<a href="register.html" class="inline-block bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+					Register Now
+				</a>
+			</div>
+
+			<div class="p-6 bg-white rounded-lg shadow-md">
+				<h2 class="text-2xl font-semibold text-gray-700 mb-4">Already have an account?</h2>
+				<p class="text-gray-600 mb-4">Welcome back! Log in to access your timeline, connect with friends, and continue building your memories.</p>
+				<a href="login.html" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+					Login
+				</a>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
