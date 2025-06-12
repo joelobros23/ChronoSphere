@@ -3,11 +3,68 @@
 <head>
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-	<title>ChronoSphere</title>
-	<script src='[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)'></script>
+	<title>ChronoSphere - Profile</title>
+	<link href="assets/css/tailwind.css" rel="stylesheet">
 	<link rel='stylesheet' href='assets/css/style.css'>
 </head>
 <body class='bg-gray-100'>
-	<!-- Content for profile.html -->
+	<!-- Navbar -->
+	<div id="navbar-container"></div>
+
+	<!-- Profile Content -->
+	<div class='container mx-auto mt-8 p-4 bg-white shadow-md rounded-lg'>
+		<div class='flex items-center justify-between mb-4'>
+			<h1 class='text-2xl font-semibold'>Profile</h1>
+			<button id="edit-profile-button" class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+				Edit Profile
+			</button>
+		</div>
+
+		<div class='flex'>
+			<!-- Profile Picture -->
+			<div class='w-1/4'>
+				<img id='profile-picture' src='assets/images/default_profile.png' alt='Profile Picture' class='rounded-full w-40 h-40 object-cover'>
+			</div>
+
+			<!-- User Information -->
+			<div class='w-3/4 pl-4'>
+				<div id='profile-info'>
+					<p><strong>Username:</strong> <span id='username'></span></p>
+					<p><strong>First Name:</strong> <span id='first-name'></span></p>
+					<p><strong>Last Name:</strong> <span id='last-name'></span></p>
+					<p><strong>Email:</strong> <span id='email'></span></p>
+					<p><strong>Bio:</strong> <span id='bio'></span></p>
+				</div>
+
+				<!-- Edit Profile Form (Hidden by default) -->
+				<div id='edit-profile-form' class='hidden'>
+					<form id="update-profile-form">
+						<div class='mb-4'>
+							<label for='edit-first-name' class='block text-gray-700 text-sm font-bold mb-2'>First Name:</label>
+							<input type='text' id='edit-first-name' name='first_name' class='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'>
+						</div>
+						<div class='mb-4'>
+							<label for='edit-last-name' class='block text-gray-700 text-sm font-bold mb-2'>Last Name:</label>
+							<input type='text' id='edit-last-name' name='last_name' class='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'>
+						</div>
+						<div class='mb-4'>
+							<label for='edit-bio' class='block text-gray-700 text-sm font-bold mb-2'>Bio:</label>
+							<textarea id='edit-bio' name='bio' class='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'></textarea>
+						</div>
+						<button type='submit' class='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+							Save Changes
+						</button>
+						<button type='button' id='cancel-edit-button' class='bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+							Cancel
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src='components/navbar.html'></script>
+	<script src='assets/js/app.js'></script>
+	<script src='assets/js/profile.js'></script>
 </body>
 </html>
